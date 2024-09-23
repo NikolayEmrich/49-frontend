@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подклюение css файла к html -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Такой стиль будет приоритетным перед CSS -->
+     <!-- При наличии CSS такой стиль ИСПОЛЬЗОВАТЬ НЕ СТОИТ! -->
+    <style>
+        h1 {
+            color: brown;
+        }
+    </style>
+
+    <title>CSS intro</title>
+</head>
+<body>
+    <h1>CSS intro</h1>
+    <p>Cascading Style Sheets (CSS) - каскадные таблицы стилей</p>
+    <p>Свойства, обращенные через селектор по тегу, коснуться всех элементов группы</p>
+    <p class = "blue-text">Стилизация конкретного элемента через селектор по классу</p>
+
+
+    <p class="css-heading">CSS можно получить 3 спобами:</p>
+    <p class="css-heading">CSS можно получить 3 спобами:</p>
+
+    <!-- Создание списка табуляцией "ul>li*3" -->
+    <ul>
+        <!-- Использование одного класса с курсивом -->
+        <li class="css-list-item">1. Создать файл со стилями CSS (ПРИОРИТЕТНЫЙ)</li>
+
+        <!-- Использование 2-ух классов -->
+        <li class="css-list-item css-priority">2. Внутренний CSS через тег "style" (строчка 12)</li>
+        <li class="css-list-item" style="color:rgb(9, 149, 23)">3. <a class="css-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS">Инлайновый CSS.</a> Указывается внутри конкретного тега </li>
+    </ul>
+
+    <!-- Ссылка на картинку со свойства класса -->
+    <img class="img-no-online" src="https://awdee.ru/wp-content/uploads/2022/12/1-1024x432.png" alt="Picture error">
+
+</body>
+</html>

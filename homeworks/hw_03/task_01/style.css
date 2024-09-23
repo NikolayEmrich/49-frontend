@@ -1,0 +1,14 @@
+p {
+    /* background-color: antiquewhite; */
+    width: 496px;
+    border: 3px solid rgb(237, 16, 16);
+    background-color: rgb(245, 249, 210);
+}
+
+span {
+    /* background-color: antiquewhite; */
+    width: 490px;
+    border: 3px solid rgb(71, 16, 237);
+    background-color: rgb(245, 249, 210);
+}
+

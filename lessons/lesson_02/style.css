@@ -1,0 +1,51 @@
+/* Работа с css-селекторами по тегу */
+
+/* Класс со * создается для всех неконкретизированных тегов */
+* {
+    color: rgba(157, 157, 157, 0.851);
+}
+
+h1 {
+    /*  Изменение цвета */
+    color: darkslateblue;
+    /* Выравнивание по центру */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color:  red;
+}
+
+/* Создание класса в CSS */
+.blue-text {
+    /* Выбор цвета вручную (нажатие на "цветовой квадратик") */
+    color: rgb(44, 44, 164);
+}
+
+.css-heading {
+    /* толщина шрифта */
+    font-weight: bold;
+    font-size: 20px;
+    color: darkblue;
+}
+
+.css-link {
+    font-weight: bold;
+    color: rgb(92, 116, 15);
+}
+
+.img-no-online {
+    width: 600px;
+    text-align: center;
+}
+
+.css-list-item {
+    font-style: italic;
+}
+
+.css-priority {
+    text-decoration: underline;
+    color: rgb(138, 16, 147);
+
+}

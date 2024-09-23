@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lesson_04. CSS flexbox</h1>
+    <p>Flexbox - гибкая технология для позиционирования элементов в CSS</p>
+
+    <p>Правила работы с flexbox:</p>
+    <ul>
+        <li>display:flex - включиние flex-отображения в контейнере нужно задать свойство display:flex</li>
+        <li>Justify-content - свойство выравнивания по главной оси</li>
+        <li>align-items - свойство выравнивания по поперечной оси</li>
+        <li>gap - значение промежутка между flex-элементами</li>
+    </ul>
+
+    <h3>Пример 1:</h3>
+    <div class="container">
+        <div class="item">
+            <h5>item 1</h5>
+            <p>flex</p>
+        </div>
+        <div class="item-img"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h3>Пример 2:</h3>
+    <div class="container2">
+        <!-- Такой формат записи поможет создать несколько блоков сразу "div.container_item*10" -->
+        <div class="container_item">first</div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item"></div>
+        <div class="container_item">last</div>
+    </div>
+
+    <h3>Пример 3:</h3>
+    <div class="flex-card">
+        <h4>SAMSUNG Galaxy Book4</h4>
+        <p>Notebook, mit 15,6 Zoll Display, Intel® Core™ 3,100U Prozessor, 8 GB RAM, 256 GB SSD, Intel® Core™ Onboard Graphics, Gray, Windows 11 Home (64 Bit)
+        </p>
+        <img src="./notebook.jpg" alt="html structure">
+        
+    </div>
+
+    
+</body>
+</html>

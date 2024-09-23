@@ -1,0 +1,102 @@
+
+/* Чтобы контейнеры сразу было видно можно задать и фон по умолчанию */
+/* div {
+    background-color: burlywood;
+} */
+
+.container {
+    /* Включение свойства flex для родителя */
+    display: flex;
+    
+    /* Свойство выравнивания по главной оси (горизонтали)*/
+    justify-content: center;
+    
+    /* Выравнивание элементов по поперечной оси (по вертикали) */
+    align-items: center;
+
+    /* Свойство для выбора положения главной оси */
+    /* flex-direction: column; */
+    /* Промежуток между элементами */
+    gap: 20px;
+    
+    width: 100%;
+    min-height: 250px;
+    background-color: #80b2ec;
+}
+/* CSS для всех div, находящихся в контейнере */
+.container > div {
+    width: 150px;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e0bf8c;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.item > h5 {
+    margin: 0;
+}
+
+.item-img {
+    background-image: url('https://cs5.pikabu.ru/post_img/2015/06/04/11/1433446202_1725992411.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.container2 {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Разворот элементов от last к first */
+    /* flex-wrap: wrap-reverse; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 450px;
+    border: 1px solid black;
+    background-color: #f391da;
+}
+
+.container2 > div {
+    height: 150px;
+    width: 150px;
+    background-color: #a9eb99;
+}
+
+.flex-card {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.flex-card > p, h3 {
+    margin: 0;
+}
+
+.flex-card > p {
+    font-size: 14px;
+}
+
+.flex-card > h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-card > img {
+    padding-top: 25px;
+    width: 105%;
+}
