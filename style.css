@@ -72,6 +72,6 @@ table {
     tr:hover td {
     color: rgb(251, 251, 251);
     background: #b27bca;
-    font-weight: bold;
+    /* font-weight: bold; */
     }
 
