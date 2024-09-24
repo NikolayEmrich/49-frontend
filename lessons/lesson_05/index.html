@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS position</title>
+</head>
+
+<body>
+    <header>
+        <span>sticky</span>
+    </header>
+    <main>
+        <div class="div-init"></div>
+        <h1 class="fixed-head">Lesson 05 (заголовок fixed)</h1>
+        <p class="desc">Свойство position определяет, какой будет использован метод для расположения элемента (static, relative, fixed, absolute, sticky)</p>
+
+        <ul>
+            <li>static - свойство position go по умолчанию для всех элементов, когда элементы ведут себя привычно для нас без изменений</li>
+            <li>fixed - вырывает элемент из потока и делает его невидимым для других элементов</li>
+            <li>sticky - вначале элемент сохраняет место, но при указании в пикселлях значений по осям (top, left, right, bottom) уходит из потока элементов</li>
+            <li>absolute - по умолчанию двигает элементы относительно body через свойства (top, left, right, bottom)</li>
+            <li>relative - вырывается из потока, но оставляет за собой место и свидгается относительно него. Обычно используется в связке с absolute, чтобы указывать позиционирование для родителя.</li>
+        </ul>
+
+        <div class="square">
+            <span>relative</span>
+            <div class="absolute-circle"> 
+                <span>absolute</span>
+            </div>
+            <div class="absolute-square">
+                <span>absolute</span>
+            </div>
+        </div>
+        <!-- Эта часть кода была создана для работы с первыми 3-мя свойствами position  -->
+        <!-- Указываем "lorem" и нажимаем Enter-->
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit dolores autem recusandae reiciendis ut! Deserunt odit error repellendus reprehenderit dolore dignissimos? Quod cum dolores dolorem corporis accusamus fugiat distinctio consectetur.
+        Laborum facilis similique cumque, dolores quae eaque. Praesentium inventore a debitis quia explicabo voluptatum consequatur? Consequuntur error repellat numquam accusantium! Nisi ipsum adipisci odio! Minus quisquam vitae vel minima laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quibusdam, eaque doloribus esse, quam mollitia, nostrum saepe repudiandae hic corporis dignissimos voluptatum perspiciatis ullam beatae aperiam incidunt sapiente! Voluptatibus, accusamus!
+        Asperiores libero, omnis repellendus, necessitatibus ratione obcaecati cum consectetur dignissimos voluptate commodi explicabo! Architecto rem nemo, possimus porro culpa autem obcaecati laboriosam vel. Quibusdam sit possimus vero minus odit eveniet.
+        Modi saepe facere quod itaque sapiente eos illum eligendi quae eum nemo, veniam quos soluta, libero, corrupti voluptatum adipisci. Obcaecati harum dolorum magni error itaque hic veniam aliquam debitis quod.
+        Optio amet dicta eveniet ipsa quod impedit ab dolore, earum veniam eaque atque qui odit iusto maxime. Necessitatibus delectus repellendus voluptates totam ratione porro illum asperiores vero, fugiat dolore incidunt?
+        Ipsam facilis cupiditate, nostrum nulla eum doloribus impedit inventore eos aperiam reiciendis dolor libero iste quo iure animi saepe magni minus repellat voluptates aspernatur perferendis tenetur commodi minima dolore. Dolorum?
+        </p>
+    </main>
+    
+</body>
+</html>

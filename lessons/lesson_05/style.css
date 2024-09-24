@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    font-size: 30px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    /* Указываем чтобы прибить header к верху сайта */
+    position: sticky;
+    z-index: 5;
+    top: 0px;
+    background-color: #adb8e1;
+}
+
+.div-init {
+    width: 100%;
+    height: 60px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.desc {
+    margin-top: 50px;
+}
+
+.fixed-head {
+    position: fixed;
+    top: 100px;
+    background-color: #9a4fa3;
+    color: #e9d1cf;
+}
+
+main {
+    /* Фиксирует на листе (убирает прокрутку) */
+    /* position: fixed; */
+    /* Main становится видимым поверх header */
+    /* position: relative; */
+    /* Фиксирует header, если использовать для него (в случае указывания начального значения headera top:0 */
+    /* position: sticky; */
+    padding: 0 50px;
+}
+
+.sticky {
+    background-color: blue;
+    color: red;
+    position: sticky;
+    top: 200px;
+}
+
+.square {
+    /* Когда мы указываем абсолютное позиционирование мы можем двигать по всей странице не замечая уже указанные элементы */
+    /* position: absolute; */
+    position: relative;
+    z-index: 2;
+    top: 0px;
+    left: 30px;
+    width: 250px;
+    height: 250px;
+    background-color: #db93d7;
+}
+
+.absolute-circle {
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(66, 180, 121);
+    border-radius: 50%;
+}
+
+.absolute-square {
+    position: absolute;
+    z-index: -2;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background-color: #addb2c;
+}
