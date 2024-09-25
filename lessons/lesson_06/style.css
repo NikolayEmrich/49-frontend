@@ -1,0 +1,104 @@
+body {
+    margin-bottom: 100px;
+}
+
+.container-grid {
+    /* Задали свойство grid контейнеру родителя */
+    display: grid;
+
+    /* Промежуток между контейнерами */
+    gap: 5px;
+
+    /* Объявили правило для ширины колонок */
+    /* 1fr - это одна ячейка области */
+    /* каждое новое значение - это ширина колонки */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Можно задавать значение в пикселях или процентах: */
+    /* grid-template-columns: 200px 300px 200px; */
+    /* grid-template-columns: 25% 25% 50%; */
+
+    /* Высота для одной ячейки */
+    /* grid-template-rows: 80px; */
+    /* Высота каждой ячейки*/
+    grid-auto-rows: 80px;
+}
+
+.grid-item {
+    padding: 10px;
+    background-color: rgb(198, 198, 245);
+}
+
+.container-grid-min-max {
+    display: grid;
+    gap: 3px;
+    /* Указываем число столбцов формулой повтора */
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /* Grid со свойствами автоматического растягивания и переноса ячеек на другую строку (ячейки будут сужаться пока не достигнут своего минимального размера 300px */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+}
+
+.grid-item-five {
+    background-image: url('https://cdn.tripster.ru/thumbs2/f5a8c1fe-b128-11ed-9e63-2e5ef03bee8d.1220x600.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-item-adaptive {
+    background-color: #f8eb9e;
+}
+
+.container-grid-areas {
+    gap: 5px;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "content content sun"
+        "content content planet"
+        "footer footer footer"
+    ;
+    grid-auto-rows: repeat(4, 1fr);
+}
+
+.sun {
+    /* Свойства картинки с фоном */
+    background-image: url('https://img.freepik.com/premium-photo/sun-with-sun-sky_421632-12290.jpg?w=740'); 
+    background-size: cover;
+    background-position: center;
+
+    grid-area: sun;
+    background-color: #f4cdc8;
+
+    /* Свойства смайлика с солнцем */
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    grid-area: header;
+    background-color: #fbb2fc;
+}
+
+.content {
+    grid-area: content;
+    background-color: #9ff3dd;
+}
+
+.planet {
+    font-size: 75px;
+    grid-area: planet;
+    background-color: #faffba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    grid-area: footer;
+    background-color: #c5fbc3;
+}
