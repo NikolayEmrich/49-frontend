@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card-poster {
+    height: 400px;
+}
+
+.card-rating {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    color: white;
+    width: fit-content;
+    padding: 4px;
+}
+
+.card-rating-good {
+    background-color: green;
+}
+
+.card-rating-bad {
+    background-color: red;
+}
+
+.card-tickets {
+    font-size: 20px;
+    position: absolute;
+    width: fit-content;
+    bottom: 12px;
+    right: 12px;
+    color: white;
+    padding: 4px;
+    background-color: rgb(245, 100, 3);
+}
+
