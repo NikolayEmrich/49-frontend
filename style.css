@@ -4,7 +4,7 @@ header {
     font-size: 33px; 
     height: 20px;
     width: 100%;
-    padding: 20px 20px 20px 56px;
+    padding: 20px 20px 20px 66px;
     background-color: #565b88;
 }
 
@@ -23,7 +23,12 @@ header > span {
     background-color: rgb(237, 151, 132);
 }
 
+table a {
+    text-decoration: none;
+}
+
 table {
+    margin-left: 10px;
     font-size: 21px;
     border-spacing: 0;
     empty-cells: hide;
