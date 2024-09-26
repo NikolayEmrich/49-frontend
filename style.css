@@ -66,13 +66,13 @@ table {
     color: white;
     }
     .round-top {
-    border-top-left-radius: 5px;
+    border-top-left-radius: 10px;
     }
     .round-bottom {
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 10px;
     }
     .round-bottom-right {
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 10px;
     }
     tr:hover td {
     color: rgb(251, 251, 251);

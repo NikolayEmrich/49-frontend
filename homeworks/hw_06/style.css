@@ -23,6 +23,11 @@ nav {
     margin: 30px 30px;
 }
 
+nav > i {
+    font-size: 30px;
+    margin-top: -5px;
+}
+
 nav > a {
     font-size: 20px;
     color: white;
@@ -82,10 +87,6 @@ footer {
 .burger-menu {
     font-size: 30px;
     display: none;
-}
-
-.wrapper {
-    max-width: 1100px;
 }
 
 @media (max-width: 745px) {
