@@ -10,6 +10,12 @@ header {
 
 header > span {
     text-transform: uppercase
+    
+}
+
+header:hover span {
+    color: rgb(0, 0, 0);
+    transition: all 1s linear;
 }
 
 .font-big-size {
@@ -37,7 +43,7 @@ table {
     padding: 10px 20px;
     text-align: center;
     border-bottom: 1px solid #F4EEE8;
-    transition: all 0.5s linear;
+    transition: all 1s linear;
     }
     td:first-child {
     text-align: left;
