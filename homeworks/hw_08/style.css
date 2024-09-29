@@ -1,0 +1,40 @@
+header img {
+    width: 100px;
+}
+
+.first-line {
+    padding: 0px 7px 7px;
+    display: flex;
+    /* justify-content: left; */
+    /* align-items: center; */
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid rgb(219, 209, 209);
+}
+
+.second-line {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header a:link, header a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+
+
+

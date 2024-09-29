@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Fredoka", sans-serif;
     display: flex;
     flex-direction: column;
     /* 100% видимой области пользователем по высоте */
@@ -49,18 +49,34 @@ main {
 }
 
 footer {
+    color: white;
+    padding: 25px 35px;
     width: 100%;
-    height: 50px;
+    height: 27px;
     background-color: gray;
+    line-height: 1.5;
+}
+
+footer i {
+    font-size: 22px;
+}
+
+/* Другие свойства на ссылку: */
+/* a:link, a:visited, a:focus, a:active, a {
+    color: #fff;
+} */
+
+footer a:link, footer a:visited {
+    color: #fff;
+    text-decoration: none;
 }
 
 .grid-cards {
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-auto-rows: 400px;
+    grid-auto-rows: auto;
     gap: 5px;
-    
 }
 
 .grid-cards > div {
