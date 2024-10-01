@@ -1,0 +1,47 @@
+.method-list span {
+    font-weight: bold;
+    color: black;
+}
+
+.desc {
+    color: darkred;
+}
+
+.method-list > li {
+    color: rgb(21, 92, 15);
+    list-style-type: none;
+}
+
+/* Класс-модификатор чтобы прятать элемент */
+.hide {
+    display: none;
+}
+
+.btn {
+    border: none;
+    padding: 5px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.change-heading {
+    background-color: rgb(146, 235, 146);
+}
+
+.hide-list {
+    background-color: #f1b7b7;
+}
+
+.create-element {
+    background-color: #d9d9fe;
+}
+
+.btn:hover {
+    background-color: #8a4d85;
+    color: white;
+}
+
+.dom-result {
+    color: rgb(193, 125, 0);
+    font-weight: bold;
+}

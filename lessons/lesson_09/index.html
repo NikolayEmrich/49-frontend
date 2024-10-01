@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- 2-ой способ подключения с атрибутом "defer", чтобы скрипт сработал после загрузки всей страницы -->
+    <script defer src="script.js"></script>
+    <title>Lesson_09. DOM intro</title>
+</head>
+<body>
+    <h2>Lesson_09. DOM intro</h2>
+    <p id="desc">DOM - Document Object Model</p>
+    <p id="desc-info">Все элементы на странице можно представить в виде глобального объекта document.</p>
+    <p>Чтобы находить элементы в DOM нужно доабвить им что-то уникальное (класс или id):</p>
+
+    <ul class="method-list">
+        <li>Поиск по тэгам - <span>document.getElementsByTagName()</span></li>
+        <li>Поиск по классам - <span>document.getElementsByClassName()</span></li>
+        <li>Поиск по id - <span>document.getElementById()</span></li>
+        <li>Универсальный метод поиска. Класс уточняется через точку. ID через решетку. В ответе придет первый элемент удовлетворяющий поиск - <span>document.querySelector()</span></li>
+    </ul>
+
+    <div>
+        <button class="btn change-heading" id="btn-change-heading">Change heading color</button>
+        <button class="btn hide-list" id="btn-hide-list">Hide-list</button>
+        <button class="btn create-element" id="btn-create-element">Create element</button>
+    </div>
+
+    <!-- 1-ый сопосбо подключения  JS файла перед закрывающимся тегом body (после футера) -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
