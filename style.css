@@ -4,7 +4,7 @@ header {
     font-size: 33px; 
     height: 20px;
     width: 100%;
-    padding: 20px 20px 20px 66px;
+    padding: 20px 20px 20px 100px;
     background-color: #565b88;
 }
 
@@ -34,7 +34,7 @@ table a {
 }
 
 table {
-    margin-left: 10px;
+    margin: 10px auto 10px;
     font-size: 21px;
     border-spacing: 0;
     empty-cells: hide;
