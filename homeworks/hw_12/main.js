@@ -40,6 +40,7 @@ const getOutAge = (starWarsHero) => {
 const starWarsHeroesModified = starWarsHeroes.map(getOutAge);
 console.log(starWarsHeroesModified);
 
+
 console.log("\nЗадача 2. Джедаи младше 40 лет");
 const filterJedi = (jedi) => {
     if (jedi.age < 40 && jedi.isJedi === true) {
@@ -51,14 +52,56 @@ const filterJedi = (jedi) => {
 const filteredStarWarsHero = starWarsHeroes.filter(filterJedi);
 console.log(filteredStarWarsHero);
 
+
 console.log("\nЗадача 3. Возраст всех джедаев");
 const sumOfJediAges = starWarsHeroes.reduce (
     (acc, current) => acc + current.age, 0,);
 console.log(sumOfJediAges + " лет")
 
-console.log("\nЗадача 3. Возраст героев +10 лет");
+
+console.log("\nЗадача 4. Возраст героев +10 лет");
 const starWarsHeroesPlus10Years = starWarsHeroes.map((hero) => {
     hero.age = hero.age + 10;
     return hero;
 });
 console.log(starWarsHeroesPlus10Years);
+
+// Второй вариант решения задачи №4.
+// const starWarsHeroesPlus10Years2 = starWarsHeroes.map((hero) => ({...hero, age: hero.age + 10}));
+// console.log(starWarsHeroesPlus10Years2);
+
+// Тестирование оператора спред!!!
+
+// спред-оператор
+const exampleArrray = [1, 2, 3];
+console.log(...exampleArrray);
+console.log(Math.max(...exampleArrray));
+
+// Копирование массива
+const copyOfExampleArray = [...exampleArrray]
+console.log(copyOfExampleArray);
+
+// Проверка массива на то, что он и правда копия.
+exampleArrray.push(4)
+console.log(exampleArrray)
+
+// Склеивание массивов
+console.log( [ ...exampleArrray, ...[5, 10, 15] ]);
+
+console.log("\nЗадача 5. Замена Энакина на Вейдера");
+
+function changeHero(hero) {
+    // if (hero.name === 'Anakin Skywalker') {
+    //     return {name: "Darth Vader", isJedi: false, age:50 }
+    // } else {
+    //     return hero;
+    // }
+    // const res = (hero.name === 'Anakin Skywalker') ? {name: "Darth Vader", isJedi: false, age: 50 } : hero;
+    // return res;
+
+    return (hero.name === 'Anakin Skywalker') ? {name: "Darth Vader", isJedi: false, age: 50 } : hero;
+
+};
+
+const starWarsHeroesWithDarthVader = starWarsHeroes.map(changeHero);
+console.log(starWarsHeroesWithDarthVader)

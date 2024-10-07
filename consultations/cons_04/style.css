@@ -23,11 +23,70 @@ a {
     min-height: 100%;
 }
 
+/* Задаем для main все свободное пространство! */
 main {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
 header {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 10px;
 }
 
+.logo-header {
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.latest-episode-section {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 50px 110px 50px;
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-latest-episodes {
+    font-size: 64px;
+}
+
+.main-button {
+    padding: 12px 19px;
+    background-color: #118DA8;
+    color: white;
+    border-radius: 6px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    border: none;
+}
+
+.episode-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-radius: 60px;
+    margin: 110px 0 135px;
+    background-color: #000000;
+    padding: 40px;
+}
+
+.episode-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
