@@ -30,7 +30,9 @@ header:hover span {
 }
 
 table a {
+    /* text-decoration-color: white; */
     text-decoration: none;
+    color: black;
 }
 
 table {
@@ -84,5 +86,8 @@ table {
     color: rgb(251, 251, 251);
     background: #b27bca;
     /* font-weight: bold; */
+    }
+    a:hover {
+    color: rgb(251, 251, 251);
     }
 
