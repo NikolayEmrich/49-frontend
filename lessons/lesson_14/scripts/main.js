@@ -1,53 +1,40 @@
 const headerElement = document.querySelector('.header');
 headerElement.innerText = 'Калькулятор';
-console.log(headerElement);
 headerElement.classList.add('red');
-
-
-// const inputElements = document.querySelectorAll('input');
-// console.log([...inputElements]);
-// console.log(inputElements[0].value);
 
 // создание элемента Кнопка
 const submitButtonElement = document.createElement('button');
 submitButtonElement.innerText = 'Результат';
 submitButtonElement.classList.add('submit-button');
-
 // добавляем созданный элемент в определенное место
 headerElement.after(submitButtonElement);
 
-// Создадим функцию с реакцией на клик по кнопке
-const submitButtonHandler = () => {
-    // console.log('Кнопку нажали');
 
-    // Ищем необходиме элементы
+// создадим функцию с реакцией на клик по кнопке
+const submitButtonHanler = () => {
+    // сначала найдем и удалим сущуствующий span (если есть)
+    const createdSpanElement = document.querySelector('.result');
+    if (createdSpanElement) {createdSpanElement.remove()};
+    // ищем наши элементы
     const inputElements = document.querySelectorAll('input');
-
-    //Запишем импуты в переменные
-    const element1 = inputElements[0].value;
+    // запишем из инпутов в переменные
+    const element1 = inputElements[0].value;  
     const element2 = inputElements[1].value;
-
     // parse / Number() / +
-    const sum = +element1 + +element2;
-    console.log(sum);
-
-    // Создадим элемент для вывода на страничку!
+    const summ = +element1 + +element2;
+    // Создадим элемент для вывода на страничку
     const resultElement = document.createElement('span');
-
-    // Заполним данными (рузельтатом)!
-    resultElement.innerText = sum;
-
-    // Отобразим результат на страничке!
-    const bodyElement = documnet.querySelector('body'); // document.body
+    resultElement.classList.add('result');
+    // Заполним данными (результатом)
+    resultElement.innerText = summ;
+    // Отобразим на страничке
+    const bodyElement = document.querySelector('body');
     bodyElement.append(resultElement);
     // body можно не искать отдельно
-    // можно использовать document.body.append....
+    // document.body.append........
 }
 
-// Добавляем на кнопку действие
 
-// Для добавления функции....
-// submitButtonElement.addEventListener('click', () => {});
+// добавляем на кнопку действие
+submitButtonElement.addEventListener('click', submitButtonHanler);
 
-submitButtonElement.addEventListener('click', submitButtonHandler);
-// console.log('JavaScript');
