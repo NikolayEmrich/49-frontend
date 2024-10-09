@@ -89,5 +89,6 @@ table {
     }
     a:hover {
     color: rgb(251, 251, 251);
+    transition: all 0.3s linear;
     }
 
