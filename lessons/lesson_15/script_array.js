@@ -1,4 +1,4 @@
-// Массив для хранения задач
+// Созда. массив с первыми 3-мя задачами
 
 let tasks = [
     { text: 'Сделать домашку', completed: true },
@@ -9,16 +9,16 @@ let tasks = [
 // Можно начинать с пустого массива, но в первоначальном варианте задания уже есть 2 задачи!
 // let tasks = [];
 
-// Получаем необходимые элементы DOM
+// Находим необходимые блоки html
 const taskInput = document.querySelector('.task-input');
 const createButton = document.querySelector('.actions .btn');
 const list = document.querySelector('.list');
 const filterButtons = document.querySelectorAll('.status .btn');
 
-// Получаем элемент аудио для воспроизведения звука
+// Находим (дополнительно) элемент аудио для воспроизведения звука
 const addMusic = document.getElementById('music');
 
-// Функция для создания задачи в массиве
+// Функция для добавления задачи
 function addTask(taskText) {
     const task = {
         text: taskText,
@@ -32,7 +32,7 @@ function addTask(taskText) {
     renderTasks();
 }
 
-// Функция для перерисовки задач на основе массива
+// Функция для фильтрации задач
 function renderTasks(filter = 'all') {
     list.innerHTML = ''; // Очищаем старые элементы перед добавлением новых
 
@@ -73,6 +73,7 @@ createButton.addEventListener('click', () => {
     if (taskText) {
         addTask(taskText); // Добавляем задачу в массив
         taskInput.value = ''; // Очищаем поле ввода
+        taskInput.focus();   // Оставляет курсор в начале поля ввода!
     }
 });
 
