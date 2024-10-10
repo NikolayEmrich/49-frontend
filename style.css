@@ -2,15 +2,14 @@ header {
     color: white;
     font-weight: bold;
     font-size: 33px; 
-    height: 20px;
+    height: 10px;
     width: 100%;
-    padding: 20px 20px 20px 100px;
+    padding: 20px 20px 48px 80px;
     background-color: #565b88;
 }
 
 header > span {
     text-transform: uppercase
-    
 }
 
 header:hover span {
