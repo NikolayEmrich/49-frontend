@@ -44,6 +44,25 @@ body {
     line-height: 160%;
 }
 
+.logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wife {
+    position:  absolute;
+    font-size: 50px;
+    font-family: "Qwitcher Grypen", serif;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    margin-top: 150px;
+}
+
 .info input {
     font-family: "DM Serif Text", serif;
     width: 100px;
