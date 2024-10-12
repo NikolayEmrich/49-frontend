@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer AIT</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="logo">
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/linkedin_logo_icon_171224.png" alt="Error picture">
+        </div>
+
+        <form class="timer" onsubmit="app.submit(event)">
+            <div class="info">
+                Start the timer:
+                <input 
+                type="number" 
+                name="time" 
+                aria-label="Число минут для упражнения" 
+                value="10"
+                />
+                minutes
+            </div>
+            <div class="countdown">
+                <div class="num" id="min_tens">0</div>
+                <div class="num" id="min">0</div>
+                <div class="dots">:</div>
+                <div class="num" id="sec_tens">0</div>
+                <div class="num" id="sec">0</div>
+            </div>
+            <button type="submit" class="button">
+                <img src="img_svg.svg" alt="icon error">
+            </button>
+        </form>
+
+
+    </div>
+</body>
+</html>
