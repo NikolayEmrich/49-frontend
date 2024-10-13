@@ -1,0 +1,61 @@
+body {  
+    scrollbar-width :thin;
+    scrollbar-color: rgb(255, 255, 255) rgb(186, 0, 0);
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    background-color: #010000;
+    border: #010000;
+    height: 500px;
+    width: 500px;
+    margin: 30px;
+}
+
+.one1 {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.two {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    font-size: 70px;
+    padding-bottom: 0px;
+}
+
+.img {
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1 {
+    height: 200px;
+    width: 80%;
+    background-color: white;
+}
+
+.texts {
+    /* border: 1px solid rgb(0, 0, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texts1 {
+    color: rgb(181, 180, 231);
+    font-size: 20px;
+    height: 150px;
+    width: 80%;
+    /* overflow: hidden; --- Контент скрывается*/ 
+    overflow: scroll;
+}
+

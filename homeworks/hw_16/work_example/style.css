@@ -129,23 +129,23 @@ body {
     font-weight: 10;
     color: white;
     gap: 10px;
-    padding: 1px;
+    padding: 0px;
     width: 150px;
     height: 150px;
 }
 
 .button > img {
     font-size: 10%;
-    width: 170px;
+    width: 169px;
 
 }
 
 @media (max-width: 768px) {
 
     body {
-        transform: scale(0.8);
+        transform: scale(0.46);
         transform-origin: 0 0;
-        padding-left: 30%;
+        padding-left: 0px;
       }
 
       .wife {
@@ -157,7 +157,7 @@ body {
         align-items: center;
         justify-content: center;
         margin-top: 150px; */
-        margin-right: -200px;
+        margin-right: 0px;
         /* transform: rotate(-5deg);
         color: rgb(221, 0, 140);
         font-weight: bolder; */

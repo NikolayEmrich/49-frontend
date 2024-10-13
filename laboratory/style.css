@@ -1,0 +1,38 @@
+body {
+    margin-bottom: 100px;
+}
+
+.container-grid {
+    display: grid;
+    gap: 5px;
+    /* Указываем число столбцов формулой повтора */
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /* Grid со свойствами автоматического растягивания и переноса ячеек на другую строку (ячейки будут сужаться пока не достигнут своего минимального размера 300px */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(82, 82, 154);
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+a {
+    /* text-decoration-color: white; */
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    transition: all 1s linear;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* background: #b27bca; */
+    /* font-weight: bold; */
+    }
