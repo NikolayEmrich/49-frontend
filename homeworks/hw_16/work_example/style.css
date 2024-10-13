@@ -7,9 +7,9 @@ body {
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     /* width: 100%; */
-    min-width: 100vh; /* !!! ДЛЯ ТЕЛЕФОНА !!! */
+    min-width: 100vh;
     /* margin-left:auto; */
     /* margin-right:auto; */
     /* overflow-y:scroll; */
@@ -140,3 +140,15 @@ body {
 
 }
 
+@media (max-width: 768px) {
+    body {
+      width: 200px;
+      height: 150px;
+      margin: 0;
+    }
+    .wrapper {
+      width: 400px;
+      height: 150px;
+      object-position: -150px 0px;
+    }
+  }
