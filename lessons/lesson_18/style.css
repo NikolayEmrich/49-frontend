@@ -1,0 +1,44 @@
+.img-dog {
+    width: 400px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+button {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.get-dog {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #c5c181;
+    padding: 10px 15px;
+    border: none;
+}
+
+.get-dog:hover {
+    background-color: #a6ae7b;
+}
+
+.ex {
+    margin-top: 50px;
+    color: #901a43;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+a {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #901a43;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}

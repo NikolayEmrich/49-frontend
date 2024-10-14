@@ -1,0 +1,35 @@
+.img-dog {
+    width: 400px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.get-dog {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #c5c181;
+    padding: 10px 15px;
+    border: none;
+}
+
+.btn-stop {
+    background-color: #7d89d6;
+}
+
+.get-dog:hover {
+    background-color: #a6ae7b;
+}
+
+.btn-stop:hover {
+    background-color: #59629d;
+}
