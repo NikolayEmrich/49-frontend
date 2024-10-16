@@ -1,0 +1,20 @@
+body {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.cat-img {
+    height: 300px;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
