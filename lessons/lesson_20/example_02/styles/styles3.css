@@ -93,7 +93,7 @@ p {
 }
 
 .temperature-max-text {
-    color: #273450;
+    color: #0f1a31;
     font-weight: 300;
 }
 
@@ -108,12 +108,7 @@ p {
 }
 
 .big-error {
-    font-size: 30px;
-    color: #fff;
-}
-
-.big-error > a{
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
 }
 
@@ -127,4 +122,3 @@ p {
     /* border: 2px solid red;
     padding: 100px; */
 }
-
