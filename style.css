@@ -1,14 +1,33 @@
 header {
+    display: flex;
+    justify-content: center;
     color: white;
     font-weight: bold;
     font-size: 33px; 
     height: 10px;
     width: 100%;
-    padding: 20px 20px 48px 80px;
+    padding: 20px 20px 48px 0px;
     background-color: #565b88;
+
 }
 
-header > span {
+.head {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lab {
+    font-size: 44px;
+    text-decoration: none;
+}
+
+.lab:hover {
+    background-color: #dbd038;
+    box-shadow: 0px 0px #dbd038;
+}
+
+header span {
     text-transform: uppercase
 }
 
