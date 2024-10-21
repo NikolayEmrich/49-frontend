@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: rgb(19, 19, 19);
+    /* margin: 0; */
+    /* padding: 0; */
+    width: 100%;
+    height: 100%;
+    font-family: "DM Sans", sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    opacity: 70%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Задаем для main все свободное пространство! */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 28px 50px 110px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 10px;
+}
+
+.logo-header {
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.latest-episode-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1337px;
+    width: 100%;
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-latest-episodes {
+    font-size: 64px;
+}
+
+.main-button {
+    padding: 12px 19px;
+    background-color: #118DA8;
+    color: white;
+    border-radius: 6px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+.episode-card {
+    display: flex;
+    gap: 60px;
+    border-radius: 60px;
+    margin: 110px 0 135px;
+    background-color: #000000;
+    padding: 40px;
+}
+
+.episode-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.episode-card-title {
+    font-size: 64px;
+}
+
+.episode-card-description {
+    font-size: 25px;
+    margin-bottom: 18px;
+    opacity: 70%;
+}
+
+.comments-container {
+    display: flex;
+    gap: 15px;
+}
+
+.comments-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 435px;
+    min-height: 321px;
+    background-color: black;
+    border-radius: 32px;
+    padding: 50px 50px 50px;
+}
+
+.command-text {
+    font-size: 34px;
+}
+
+.command-owner {
+    font-size: 30px;
+    opacity: 70%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 2px solid white;
+    border-radius: 32px;
+    padding: 100px 93px;
+}
+
+.footer-content-container {
+    display: flex;
+    gap: 203px;
+    /* width: 100%; ДОБАВЛЕНО У ВЛАДИМИРА (мало что меняет!) */
+    max-width: 1337px;
+}
+
+.logo-footer {
+    font-size: 48px;
+}
+
+.nav-footer {
+    display: flex;
+    gap: 120px; /* ДОБАВЛЕНО САМОСТОЯТЕЛЬНО!!!! */
+}
+
+.nav-footer-items {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;    /* ДОБАВЛЕНО САМОСТОЯТЕЛЬНО!!!! */
+    opacity: 70%;   /* ДОБАВЛЕНО САМОСТОЯТЕЛЬНО!!!! */
+}
+
+.nav-footer-items a {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
+        /* padding: 50px; */
+        gap: 70px;
+    }
+
+    nav {
+        /* display: flex; */
+        /* align-items: center; */
+        justify-content: space-between;
+        /* gap: 40px; */
+        width: 100%;
+    }
+
+    .section-title-container {
+        /* display: flex; */
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: space-between;
+    }
+
+    .episode-card {
+        /* display: flex; */
+        flex-direction: column;
+        /* gap: 60px; */
+        /* border-radius: 60px; */
+        /* margin: 110px 0 135px; */
+        /* background-color: #000000; */
+        /* padding: 40px; */
+    }
+
+    .episode-card-title {
+        font-size: 40px;
+    }
+
+    .episode-content-container {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+        gap: 52px;
+    }
+
+    .episode-card-description {
+        /* font-size: 25px; */
+        margin-bottom: 72px;
+        /* opacity: 70%; */
+    }
+
+    .btn-desription-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comments-container {
+        /* display: flex; */
+        /* gap: 15px; */
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .comments-card {
+        max-width: 436px;
+    }
+}
