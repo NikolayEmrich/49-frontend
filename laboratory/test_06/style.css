@@ -41,7 +41,7 @@
 @media (max-width: 1000px) {
     .all {
         width: 95%;
-        height: 95%;
-        margin-top: 0px;
+        height: 95vb;
+        margin-top: 25px;
     }
 }
