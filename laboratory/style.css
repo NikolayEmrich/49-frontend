@@ -46,10 +46,10 @@ a:hover {
     /* font-weight: bold; */
     }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     .container-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-auto-rows: 100px;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        grid-auto-rows: 75px;
     }
 
     .grid-item {
