@@ -1,0 +1,16 @@
+.haupt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 90vh;
+    height: 90vh;
+    border: 8px solid rgb(76, 91, 152);
+    border-radius: 10px;
+}

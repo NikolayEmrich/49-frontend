@@ -23,18 +23,30 @@ header {
     
 }
 
-.lab > a{
-    font-size: 35px;
+.lab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(148, 17, 15);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.lab > a {
+    font-weight: bolder;
+    font-size: 40px;
     text-decoration: none;
-    color: black;
-    position: relative;
+    color: rgb(255, 255, 255);
+    /* position: relative; */
     bottom: 5px;
     left: 15px;
 }
 
-.lab > a:hover {
-    background-color: rgb(223, 226, 43);
-    box-shadow: 0px 0px 50px rgb(223, 226, 43);
+.lab:hover {
+    background-color: rgb(227, 51, 35);
+    box-shadow : 0px 0px 0px rgb(209, 30, 30);
 }
 
 /* .light:hover {
