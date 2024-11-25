@@ -10,7 +10,14 @@
     justify-content: start;
     flex-direction: column;
     width: 90vh;
-    height: 90vh;
+    height: 85vh;
     border: 8px solid rgb(76, 91, 152);
     border-radius: 10px;
+    background: linear-gradient(45deg, rgb(75, 100, 117), rgb(124, 82, 112));
+}
+
+.border h1 {
+    color: rgb(255, 255, 255)
+    
+
 }
