@@ -1,0 +1,25 @@
+.haupt {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border {
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 50vh;
+    height: 50vh;
+    border: 8px solid rgb(76, 91, 152);
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(157, 198, 174), rgb(197, 192, 231));
+}
+
+.border h1 {
+    color: rgb(27, 21, 21)
+    
+
+}
