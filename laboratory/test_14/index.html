@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глаза следят за мышкой (щеки)</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="eye">
+    <div class="pupil"></div>
+    <div class="cheek"></div>
+  </div>
+  <div class="eye">
+    <div class="pupil"></div>
+    <div class="cheek"></div>
+  </div>
+
+  <script>
+    const eyes = document.querySelectorAll('.eye');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      eyes.forEach(eye => {
+        const rect = eye.getBoundingClientRect();
+        const eyeX = rect.left + rect.width / 2;
+        const eyeY = rect.top + rect.height / 2;
+
+        const deltaX = (x - eyeX) / 20;
+        const deltaY = (y - eyeY) / 20;
+
+        const pupil = eye.querySelector('.pupil');
+        pupil.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+      });
+    });
+  </script>
+    
+</body>
+</html>

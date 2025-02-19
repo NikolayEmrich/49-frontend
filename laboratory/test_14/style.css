@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.eye {
+  position: relative;
+  width: 150px; /* Увеличиваем глаза */
+  height: 150px;
+  background-color: #fff;
+  border: px solid #000;
+  border-top-color: #000;
+  border-right-color: #000;
+  border-left-color: #000;
+  border-bottom-color: transparent; /* Делаем нижнюю границу невидимой */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  overflow: hidden; /* Скрываем выходящие части зрачка */
+}
+
+.pupil {
+  width: 50px; /* Увеличиваем зрачок */
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.1s ease-out;
+}
+
+/* Добавляем щеки */
+.cheek {
+  position: absolute;
+  bottom: -30px; /* Чуть ниже глаза */
+  width: 150%; /* Шире глаза, чтобы полностью покрыть нижнюю часть */
+  height: 50%; /* Закрываем половину глаза снизу */
+  background-color: #f5c59b; /* Цвет щек совпадает с фоном страницы */
+  border-top-left-radius: 80px; /* Закругляем щеки */
+  border-top-right-radius: 80px;
+}
