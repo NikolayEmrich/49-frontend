@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Автоматический перевод</title>
+</head>
+<body>
+
+    <p>Что нужно сделать перед использованием?</p>
+    <p>✅ Зарегистрироваться в Yandex или Google Translate API и получить apiKey.</p>
+        <p>✅ Вставить API-ключ в код (ВАШ_API_КЛЮЧ).</p>
+            <p>✅ Заменить URL API, если используешь Google Translate или другой сервис.</p>
+
+    <!-- Кастомные кнопки -->
+    <div class="translate-buttons">
+        <button class="notranslate" onclick="changeLanguage('en')">EN</button>
+        <button class="notranslate" onclick="changeLanguage('de')">DE</button>
+        <button class="notranslate" onclick="changeLanguage('ru')">RU</button>
+    </div>
+
+    <h1 id="title">Привет, мир!</h1>
+    <p id="description">Это многоязычная страница с переключением языка.</p>
+
+    <script>
+        // Определение языка браузера и автоперевод
+        async function autoTranslate() {
+            let lang = navigator.language || navigator.userLanguage; // Определяем язык браузера
+            lang = lang.split('-')[0]; // Берем только код языка
+
+            const texts = {
+                title: document.getElementById('title').innerText,
+                description: document.getElementById('description').innerText
+            };
+
+            for (let key in texts) {
+                texts[key] = await translateText(texts[key], lang);
+            }
+
+            document.getElementById('title').innerText = texts.title;
+            document.getElementById('description').innerText = texts.description;
+        }
+
+        // Функция перевода текста через API (используй Yandex, Google или другой сервис)
+        async function translateText(text, lang) {
+            const apiKey = 'ВАШ_API_КЛЮЧ'; // Здесь должен быть API-ключ (например, Yandex)
+            const url = `https://translate.api.com/translate?text=${encodeURIComponent(text)}&lang=${lang}&key=${apiKey}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                return data.text || text;
+            } catch (error) {
+                console.error("Ошибка перевода:", error);
+                return text; // Если перевод не работает, оставляем оригинальный текст
+            }
+        }
+
+        // Функция смены языка вручную
+        function changeLanguage(lang) {
+            autoTranslate(lang);
+        }
+
+        // Запускаем автоопределение языка при загрузке страницы
+        window.onload = autoTranslate;
+    </script>
+
+</body>
+</html>

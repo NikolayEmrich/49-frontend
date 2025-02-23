@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Многоязычная страница</title>
+    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+
+    <h1 id="title">Привет, мир!</h1>
+    <p id="description">Это многоязычная страница с переключением языка.</p>
+    
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('de')">Deutsch</button>
+    <button onclick="changeLanguage('ru')">Русский</button>
+    
+    <script>
+        const resources = {
+            en: {
+                translation: {
+                    "title": "Hello, World!",
+                    "description": "This is a multilingual page with language switching."
+                }
+            },
+            de: {
+                translation: {
+                    "title": "Hallo, Welt!",
+                    "description": "Dies ist eine mehrsprachige Seite mit Sprachumschaltung."
+                }
+            },
+            ru: {
+                translation: {
+                    "title": "Привет, мир!",
+                    "description": "Это многоязычная страница с переключением языка."
+                }
+            }
+        };
+
+        i18next.init({
+            lng: 'ru',
+            resources
+        }, function(err, t) {
+            updateContent();
+        });
+
+        function changeLanguage(lang) {
+            i18next.changeLanguage(lang, updateContent);
+        }
+
+        function updateContent() {
+            document.getElementById('title').innerText = i18next.t('title');
+            document.getElementById('description').innerText = i18next.t('description');
+        }
+    </script>
+    
+</body>
+</html>

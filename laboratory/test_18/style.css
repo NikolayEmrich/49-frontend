@@ -1,0 +1,82 @@
+/* Полностью скрываем баннер Google Translate */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Убираем отступ, который остается после скрытия баннера */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* Прячем выпадающее меню Google Translate */
+.goog-te-gadget {
+    display: none !important;
+}
+
+/* Прячем значок Google внизу страницы */
+.goog-logo-link,
+.goog-te-gadget span {
+    display: none !important;
+}
+
+/* Прячем серую панель */
+.goog-te-banner {
+    display: none !important;
+}
+
+/* -------------------------------- */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 15px 30px;
+    margin: 5px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.translate-buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.translate-buttons button {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.translate-buttons button:hover {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    transform: scale(1.05);
+}
