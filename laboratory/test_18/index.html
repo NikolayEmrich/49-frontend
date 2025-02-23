@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head class="goog-te-banner-frame">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Вариант с Google Translate встроенным переводчиком</title>
+
+    <style>
+        /* Убираем баннер Google Translate */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        .goog-te-gadget {
+            display: none !important;
+        }
+
+        /* Сбрасываем top, если Google Translate добавил отступ */
+        body {
+            top: 0px !important;
+            position: relative !important;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Google Translate (скрытый контейнер) -->
     <div id="google_translate_element" style="display: none;"></div>
 
-    <!-- Кастомные кнопки (защита от перевода) -->
+    <!-- Кастомные кнопки -->
     <div class="translate-buttons">
         <button class="notranslate" onclick="changeLanguage('en')">EN</button>
         <button class="notranslate" onclick="changeLanguage('de')">DE</button>
@@ -37,7 +54,7 @@
             document.body.appendChild(script);
         })();
 
-        // Функция смены языка через встроенный Google Translate
+        // Функция смены языка
         function changeLanguage(lang) {
             let select = document.querySelector(".goog-te-combo");
             if (select) {
@@ -48,22 +65,26 @@
             }
         }
 
-        // Убираем баннер Google Translate после загрузки страницы
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        let frame = document.querySelector(".goog-te-banner-frame");
-        if (frame) {
-            frame.style.display = "none";
-        }
+        // Убираем баннер Google Translate
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                let frame = document.querySelector(".goog-te-banner-frame");
+                if (frame) frame.remove();
 
-        let banner = document.querySelector(".goog-te-banner");
-        if (banner) {
-            banner.style.display = "none";
-        }
+                let banner = document.querySelector(".goog-te-banner");
+                if (banner) banner.remove();
 
-        document.body.style.top = "0px";
-    }, 1000);
-});
+                document.body.style.top = "0px";
+            }, 500);
+        });
+
+        setInterval(function () {
+            let frame = document.querySelector(".goog-te-banner-frame");
+            if (frame) frame.remove();
+
+            let banner = document.querySelector(".goog-te-banner");
+            if (banner) banner.remove();
+        }, 500);
     </script>
 
 </body>

@@ -3,11 +3,11 @@
     display: none !important;
 }
 
-/* Убираем отступ, который остается после скрытия баннера */
+/* Сбрасываем top, если Google Translate добавил отступ */
 body {
     top: 0px !important;
-    position: static !important;
-}
+    position: relative !important;
+}    
 
 /* Прячем выпадающее меню Google Translate */
 .goog-te-gadget {
