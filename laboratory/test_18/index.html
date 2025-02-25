@@ -39,52 +39,73 @@
     <p id="description">Это многоязычная страница с переключением языка.</p>
 
     <script>
+       
         // Инициализация Google Translate
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'ru',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'ru',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
 
-        // Подключаем Google Translate API
-        (function() {
-            let script = document.createElement('script');
-            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-            document.body.appendChild(script);
-        })();
+// Подключаем Google Translate API
+(function() {
+    let script = document.createElement('script');
+    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    document.body.appendChild(script);
+})();
 
-        // Функция смены языка
-        function changeLanguage(lang) {
-            let select = document.querySelector(".goog-te-combo");
-            if (select) {
-                select.value = lang;
-                select.dispatchEvent(new Event("change"));
-            } else {
-                alert("Google Translate еще загружается, попробуйте чуть позже.");
-            }
-        }
+// Функция смены языка (с ожиданием загрузки)
+function changeLanguage(lang) {
+    let select = document.querySelector(".goog-te-combo");
 
-        // Убираем баннер Google Translate
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(function () {
-                let frame = document.querySelector(".goog-te-banner-frame");
-                if (frame) frame.remove();
+    if (!select) {
+        console.warn("Google Translate еще загружается...");
+        return;
+    }
 
-                let banner = document.querySelector(".goog-te-banner");
-                if (banner) banner.remove();
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+}
 
-                document.body.style.top = "0px";
-            }, 500);
-        });
+// Функция удаления баннера Google Translate
+function removeGoogleTranslateElements() {
+    let selectors = [
+        ".goog-te-banner-frame",
+        ".goog-te-balloon-frame",
+        "#goog-gt-tt",
+        'iframe[title="Google Translate"]',
+        ".goog-te-banner",
+        ".goog-te-gadget"
+    ];
 
-        setInterval(function () {
-            let frame = document.querySelector(".goog-te-banner-frame");
-            if (frame) frame.remove();
+    selectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => el.remove());
+    });
 
-            let banner = document.querySelector(".goog-te-banner");
-            if (banner) banner.remove();
-        }, 500);
+    document.body.style.top = "0px";
+}
+
+// Запуск удаления после загрузки страницы
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(removeGoogleTranslateElements, 1000);
+});
+
+// Повторное удаление каждые 500 мс (до исчезновения)
+let removeInterval = setInterval(function () {
+    removeGoogleTranslateElements();
+    if (!document.querySelector(".goog-te-banner-frame")) {
+        clearInterval(removeInterval);
+    }
+}, 500);
+
+// Наблюдатель за появлением новых элементов Google Translate
+const observer = new MutationObserver(() => {
+    removeGoogleTranslateElements();
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
     </script>
 
 </body>

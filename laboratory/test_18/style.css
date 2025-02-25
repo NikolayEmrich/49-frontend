@@ -1,33 +1,24 @@
-/* Полностью скрываем баннер Google Translate */
-.goog-te-banner-frame {
+/* Полное скрытие баннера Google Translate */
+.goog-te-banner-frame, .goog-te-balloon-frame, #goog-gt-tt, 
+iframe[title="Google Translate"], .goog-te-banner, .goog-te-gadget {
     display: none !important;
+    visibility: hidden !important;
+    height: 0px !important;
+    width: 0px !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 
-/* Сбрасываем top, если Google Translate добавил отступ */
+/* Убираем отступы, если баннер меняет top */
 body {
     top: 0px !important;
     position: relative !important;
-}    
-
-/* Прячем выпадающее меню Google Translate */
-.goog-te-gadget {
-    display: none !important;
 }
-
-/* Прячем значок Google внизу страницы */
-.goog-logo-link,
-.goog-te-gadget span {
-    display: none !important;
-}
-
-/* Прячем серую панель */
-.goog-te-banner {
-    display: none !important;
-}
-
-/* -------------------------------- */
 
 body {
+    top: 0px !important;
+    position: relative !important;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     text-align: center;
