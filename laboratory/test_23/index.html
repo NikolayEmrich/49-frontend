@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="resume-container">
+        <header>
+            <div class="profile">
+                <img src="pic2.jpg" alt="Photo" class="profile-img">
+                <div class="contact-info">
+                    <h1 id="name-text">Nikolay Emrikh</h1>
+                    <p class="profession" id="profession-text">Data Analyst</p>
+                    <p class="contact" id="phone-text">Phone: +7 (XXX) XXX-XX-XX</p>
+                    <p class="contact">Email: your-email@example.com</p>
+                    <p class="contact">LinkedIn: linkedin.com/in/yourname</p>
+                </div>
+
+                <div class="language-buttons">
+                    <button onclick="changeLanguage('en')">EN</button>
+                    <button onclick="changeLanguage('de')">DE</button>
+                    <button onclick="changeLanguage('ru')">RU</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Small photo in the corner -->
+        <img src="qr4.jpg" alt="Small photo" class="corner-img">
+
+        <section class="about" data-lang="en">
+            <h2>About Me</h2>
+            <p id="about-text">- Experienced specialist in the field of control and analysis of business processes (capital construction, programs for repair and maintenance of equipment, investment planning).<br>
+                - Budget planning and project strategy, identification and analysis of deviations from planned costs.<br>
+                - Compilation of large amounts of information and timely formation of operational, quarterly, and annual reporting documentation.<br>
+                - I complete projects on time, pay attention to customer requirements. I am ready to learn in the course of work and regularly undergo professional development programs. I build working relationships based on mutual respect. I adhere to work schedules and am attentive to client requirements.</p>
+        </section>
+
+        <section class="experience" data-lang="en">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>"Fast Meals & Goods LLP"</h3>
+                <h4>Almaty, Kazakhstan. Contract: 10 months</h4>
+                <p class="company">
+                    Sales Financial Analyst
+                    Sep. 2023 - Jan. 2024 (5 months)</p>
+                <ul>
+                    <li>- Daily analysis of total sales, sales by KVI positions, availability, turnover, profitability, revenue, profit, write-offs, inventory, calculation of average sales in the context of specified parameters.<br>
+                        - Control over the correct filling of the product range, determination of price parameters according to the approved margin matrix.<br>
+                        - Monthly processing of marketing agreements from suppliers, support and calculation of the results of promotional sales periods.<br>
+                        - Support of facility administrators in working with operational cash registers, solving emerging problems.</li>
+                </ul>
+                <p class="company">
+                    Retail Analyst
+                    Apr. 2023 - Aug. 2023 (5 months)</p>
+                <ul>
+                    <li>- Identification of factors affecting the sale of goods, to make a forecast of the implementation of the approved sales plan, taking into account last year's indicators and current situational trends.<br>
+                        - Collecting and summarizing sales information, creating reports based on the information received.<br>
+                        - Monitoring data on projected demand for specific product categories.<br>
+                        - Preparation of reports and development of proposals for improving the company's activities.</li>
+                </ul>
+                <h3>"Rosseti PJSC"</h3>
+                <h4>Moscow, Russia. Contract: 9 years, 1 month</h4>
+                <p class="company">
+                    Main expert
+                    Jun. 2019 - Sep. 2022 (3 years, 4 months)</p>
+                <ul>
+                    <li>- Monitoring of the implementation of plans for capital and current repairs of electrical equipment.<br>
+                        - Maintenance of technical and operational documentation.<br>
+                        - Preparation of annual and multi-year plans for maintenance and repair work for equipment.<br>
+                        - Monitoring of maintenance and repair of electrical installations.<br>
+                        - Producing clear specifications, schedules of work and instructions to remedy defects and void works. <br>
+                        - Write reports to refer repair work for inclusion in larger major repair programmes.<br>
+                        - Drawing up a schedule for repairs.<br>
+                        - Preparation of a set of tender documentation and submission of applications for tenders.<br>
+                        - Conducting a tender at all stages (receiving requests for clarification of conditions to contractors, submitting applications to the site, monitoring protocols of final results, signing contracts on trading platforms).<br>
+                        - Control of the timing of tenders, as well as tracking the results of tenders.<br>
+                        - Control of a complete database of all organized tenders for a long-term period.</li>
+                </ul>
+                <p class="company">
+                    Lead Engineer
+                    Jan. 2017 - May. 2019 (2 years, 5 months)</p>
+                <ul>
+                    <li>- Conclusion and maintenance of contractual documentation, manage the services provided by external contractors.<br>
+                        - Understand Fire Safety Regulations, Health and Safety Regulations, Emergency Procedures and other regulations.<br>
+                        - Evaluate, approve or reject claims and invoices received from contractors.<br>
+                        - Supervise works in progress.<br>
+                        - Assist with estimating work, ordering and stock control.<br>
+                        - Comply with recommended safe working practices.</li>
+                </ul>
+                <p class="company">
+                    Engineer
+                    Sep. 2013 - Dec. 2016 (3 years, 4 months)</p>
+                <ul>
+                    <li>- Maintenance of quarterly documentation for equipment repair.<br>
+                        - Maintenance of technical documentation for the operation of DC systems, own needs, ventilation (electronic database of equipment located at the substations of the branch - factory operating instructions in electronic form).<br>
+                        - Monitors the performance of maintenance and repair of batteries, power transformers, wires, cable lines and other equipment.<br>
+                        - Checking the technical condition of electrical equipment, the quality of repairs performed.<br>
+                        - Controls the quality of equipment repairs, the timeliness of work performed by contractors.</li>
+                </ul>
+                <h3>"Moscow Witte University"</h3>
+                <h4>Moscow, Russia. Contract: 3 years</h4>
+                <p class="company">
+                    Specialist of the Information and Consultation Center
+                    Jun. 2011 - May. 2013 (2 years)</p>
+                <ul>
+                    <li>- Ensuring timely and high-quality fulfillment of university users' requests.<br>
+                        - Setting up electronic forms of university documentation.<br>
+                        - Organization and control of the operability of electronic learning process management systems.<br>
+                        - Reporting on the results of the work of departments.</li>
+                </ul>
+                <p class="company">
+                    Technical Support Specialist
+                    Jun. 2010 - May. 2011 (1 year)</p>
+                <ul>
+                    <li>- Support of the users of the automated information system for recording and accompanying students.<br>
+                        - Control of timely informing users about the status.<br>
+                        - Execution of applications of increased complexity.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="education" data-lang="en">
+            <h2>Education</h2>
+            <h3>Moscow Witte University</h3> 
+            <p>Diploma of a Specialist. Qualification "Lawyer" in the specialty "Jurisprudence".</p>
+            <h3>Moskauer Institut für Energietechnik</h3> 
+            <p>Diploma of professional retraining in the specialty "Electric power systems and networks", Professional development.</p>
+            <h3>AIT Berlin, Germany</h3> 
+            <p>Certificate of professional development "Fullstack developer".</p>
+        </section>
+
+        <section class="skills" data-lang="en">
+            <h2>Skills</h2>
+                <h3>Backend</h3>
+                    <ul>
+                        <li>Java Core, Basic Programming, Algorithm Complexity, Spring/Spring Boot, Hibernate, Maven, JUnit</li>
+                    </ul>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL & NoSQL, Databases, Hibernate (ORM for databases)</li>
+                    </ul>
+                    <h3>DevOps & Tools</h3>
+                    <ul>
+                        <li>Linux, Git/GitHub, Digital Ocean</li>
+                    </ul>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML/CSS, JavaScript, TypeScript, React, Redux</li>
+                    </ul>
+                    <h3>Networking & Security</h3>
+                    <ul>
+                        <li>Internet Protocols, DSGVO/Privacy Policy/Personal Data</li>
+                    </ul>
+                    <h3>Project Management & Miscellaneous</h3>
+                    <ul>
+                        <li>Project Management, Technical English, Betriebliche Lernphase</li>
+                    </ul>
+        </section>
+
+        <section class="languages" data-lang="en">
+            <h2>Languages</h2>
+            <ul>
+                <li>Russian — Native</li>
+                <li>English — B1</li>
+                <li>German — B1</li>
+            </ul>
+        </section>
+
+        <section class="references" data-lang="en">
+            <h2>References</h2>
+            <p>Available upon request.</p>
+        </section>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                about: "About Me",
+                nameText: "Nikolay Emrikh",
+                professionText: "Data Analyst",
+                phoneText: "Phone: +7 (XXX) XXX-XX-XX",
+                aboutText: "- Experienced specialist in the field of control and analysis of business processes (capital construction, programs for repair and maintenance of equipment, investment planning).<br>- Budget planning and project strategy, identification and analysis of deviations from planned costs.<br>- Compilation of large amounts of information and timely formation of operational, quarterly, and annual reporting documentation.<br>- I complete projects on time, pay attention to customer requirements. I am ready to learn in the course of work and regularly undergo professional development programs. I build working relationships based on mutual respect. I adhere to work schedules and am attentive to client requirements.",
+                experience: "Work Experience",
+                education: "Education",
+                skills: "Skills",
+                languages: "Languages",
+                references: "References"
+            },
+            de: {
+                about: "Über mich",
+                nameText: "Nikolay Emrikh",
+                professionText: "Datenanalyst",
+                phoneText: "Telefonieren: +7 (XXX) XXX-XX-XX",
+                aboutText: "- Erfahrene Fachkraft im Bereich Kontrolle und Analyse von Geschäftsprozessen (Hochbau, Programme zur Reparatur und Wartung von Geräten, Investitionsplanung).<br>- Budgetplanung und Projektstrategie, Identifizierung und Analyse von Abweichungen von den geplanten Kosten.<br>- Zusammenstellung großer Informationsmengen und rechtzeitige Erstellung von Betriebs-, Quartals- und Jahresberichten.<br>- Ich erledige Projekte termingerecht, achte auf die Anforderungen der Kunden. Ich bin bereit, während der Arbeit zu lernen und regelmäßig Weiterbildungsprogramme zu absolvieren. Ich baue Arbeitsbeziehungen auf der Grundlage gegenseitigen Respekts auf. Ich halte mich an Arbeitszeiten und achte auf die Anforderungen der Kunden.",
+                experience: "Berufserfahrung",
+                education: "Bildung",
+                skills: "Fähigkeiten",
+                languages: "Sprachen",
+                references: "Referenzen"
+            },
+            ru: {
+                about: "Обо мне",
+                nameText: "Николай Эмрих",
+                professionText: "Аналитик данных",
+                phoneText: "Телефон: +7 (XXX) XXX-XX-XX",
+                aboutText: "- Опытный специалист в области контроля и анализа бизнес-процессов (капитальное строительство, программы ремонта и технического обслуживания оборудования, инвестиционное планирование).<br>- Планирование бюджета и стратегии проекта, выявление и анализ отклонений от плановых затрат.<br>- Составление больших объемов информации и своевременное формирование оперативной, квартальной и годовой отчетной документации.<br>- Выполняю проекты в срок, внимательно отношусь к требованиям заказчика. Готов учиться в процессе работы, регулярно прохожу программы повышения квалификации. Строю рабочие отношения на основе взаимоуважения. Соблюдаю график работы, внимательно отношусь к требованиям клиента.",
+                experience: "Опыт работы",
+                education: "Образование",
+                skills: "Навыки",
+                languages: "Языки",
+                references: "Рекомендации"
+            }
+        };
+
+        function changeLanguage(lang) {
+    // Получаем элементы, которые нужно трясти
+    let elementsToShake = [
+        document.querySelector("#name-text"),
+        document.querySelector("#profession-text"),
+        document.querySelector("#phone-text"),
+        document.querySelector("#about-text")
+    ];
+
+    // Убираем класс 'shake' и 'show' перед добавлением его снова
+    elementsToShake.forEach(el => {
+        el.classList.remove('shake');  // Убираем тряску
+        el.classList.remove('show');   // Убираем плавное изменение текста
+    });
+
+    // Применяем тряску ко всем элементам
+    elementsToShake.forEach(el => {
+        el.classList.add('shake');  // Добавляем класс тряски
+    });
+
+    // После окончания тряски заменяем текст на новый
+    setTimeout(() => {
+        document.getElementById("name-text").innerHTML = translations[lang].nameText;
+        document.getElementById("profession-text").innerHTML = translations[lang].professionText;
+        document.getElementById("phone-text").innerHTML = translations[lang].phoneText;
+        document.querySelector(".about h2").innerText = translations[lang].about;
+        document.getElementById("about-text").innerHTML = translations[lang].aboutText;
+
+        // Убираем анимацию тряски и добавляем плавное появление
+        elementsToShake.forEach(el => {
+            el.classList.remove('shake');
+            el.classList.add('text-change');  // Добавляем эффект плавного изменения текста
+        });
+
+        // Делаем плавное появление текста
+        setTimeout(() => {
+            elementsToShake.forEach(el => {
+                el.classList.add('show'); // Добавляем 'show' для плавного появления текста
+            });
+        }, 10);  // Это задержка, чтобы класс 'text-change' успел сработать
+    }, 500); // Время завершения анимации тряски
+}
+
+    </script>
+</body>
+
+</html>

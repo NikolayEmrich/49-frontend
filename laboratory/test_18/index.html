@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Вариант с Google Translate встроенным переводчиком</title>
+    <title>Google Translate с кнопками смены языка</title>
 
     <style>
         /* Убираем баннер Google Translate */
@@ -16,7 +16,7 @@
             display: none !important;
         }
 
-        /* Сбрасываем top, если Google Translate добавил отступ */
+        /* Убираем возможный отступ */
         body {
             top: 0px !important;
             position: relative !important;
@@ -24,9 +24,8 @@
     </style>
 </head>
 <body>
-
-    <!-- Google Translate (скрытый контейнер) -->
-    <div id="google_translate_element" style="display: none;"></div>
+    <!-- Google Translate (контейнер) -->
+    <div id="google_translate_element"></div>
 
     <!-- Кастомные кнопки -->
     <div class="translate-buttons">
@@ -39,74 +38,40 @@
     <p id="description">Это многоязычная страница с переключением языка.</p>
 
     <script>
-       
-        // Инициализация Google Translate
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'ru',
-        autoDisplay: false
-    }, 'google_translate_element');
-}
+        // Функция инициализации Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                autoDisplay: false,
+                includedLanguages: 'en,de,ru'  // Ограничиваем доступные языки для перевода
+            }, 'google_translate_element');
+        }
 
-// Подключаем Google Translate API
-(function() {
-    let script = document.createElement('script');
-    script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    document.body.appendChild(script);
-})();
+        // Подключаем Google Translate API
+        (function() {
+            let script = document.createElement('script');
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            script.onload = () => console.log("Google Translate API загружен");
+            document.body.appendChild(script);
+        })();
 
-// Функция смены языка (с ожиданием загрузки)
-function changeLanguage(lang) {
-    let select = document.querySelector(".goog-te-combo");
+        // Функция для изменения языка страницы
+        function changeLanguage(lang) {
+            let select = document.querySelector(".goog-te-combo");
 
-    if (!select) {
-        console.warn("Google Translate еще загружается...");
-        return;
-    }
+            // Проверяем, если select не существует (может быть, Google Translate еще не загрузился)
+            if (!select) {
+                console.log("Google Translate еще не загружен...");
+                return;
+            }
 
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
-}
+            // Устанавливаем выбранный язык
+            select.value = lang;
 
-// Функция удаления баннера Google Translate
-function removeGoogleTranslateElements() {
-    let selectors = [
-        ".goog-te-banner-frame",
-        ".goog-te-balloon-frame",
-        "#goog-gt-tt",
-        'iframe[title="Google Translate"]',
-        ".goog-te-banner",
-        ".goog-te-gadget"
-    ];
-
-    selectors.forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => el.remove());
-    });
-
-    document.body.style.top = "0px";
-}
-
-// Запуск удаления после загрузки страницы
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(removeGoogleTranslateElements, 1000);
-});
-
-// Повторное удаление каждые 500 мс (до исчезновения)
-let removeInterval = setInterval(function () {
-    removeGoogleTranslateElements();
-    if (!document.querySelector(".goog-te-banner-frame")) {
-        clearInterval(removeInterval);
-    }
-}, 500);
-
-// Наблюдатель за появлением новых элементов Google Translate
-const observer = new MutationObserver(() => {
-    removeGoogleTranslateElements();
-});
-
-observer.observe(document.body, { childList: true, subtree: true });
-
+            // Создаем событие изменения для переключения языка
+            select.dispatchEvent(new Event("change"));
+            console.log("Язык переключён на:", lang);
+        }
     </script>
-
 </body>
 </html>

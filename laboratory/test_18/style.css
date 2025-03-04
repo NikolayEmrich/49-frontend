@@ -1,5 +1,5 @@
 /* Полное скрытие баннера Google Translate */
-.goog-te-banner-frame, .goog-te-balloon-frame, #goog-gt-tt, 
+/* .goog-te-banner-frame, .goog-te-balloon-frame, #goog-gt-tt, 
 iframe[title="Google Translate"], .goog-te-banner, .goog-te-gadget {
     display: none !important;
     visibility: hidden !important;
@@ -8,13 +8,7 @@ iframe[title="Google Translate"], .goog-te-banner, .goog-te-gadget {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
-}
-
-/* Убираем отступы, если баннер меняет top */
-body {
-    top: 0px !important;
-    position: relative !important;
-}
+} */
 
 body {
     top: 0px !important;

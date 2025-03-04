@@ -1,0 +1,174 @@
+/* Эффект тряски */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease forwards; /* Добавляем эффект тряски */
+}
+
+.text-change {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.text-change.show {
+    opacity: 1;
+}
+
+.language-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.language-buttons button {
+    background-color: #4d8acb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.5s ease;
+}
+.language-buttons button:hover {
+    background-color: #3c7abd;
+}
+
+.language-buttons button:active {
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+}
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    text-align: center; /* Центрируем весь текст на странице */
+}
+
+/* Стиль для маленького фото в углу */
+.corner-img {
+    position: fixed;  /* Закрепляем фото относительно окна */
+    bottom: 20px;     /* Отступ снизу */
+    top: 20px;        /* Отступ сверху */
+    right: 20px;      /* Отступ справа */
+    width: 150px;      /* Ширина изображения */
+    height: 150px;     /* Высота изображения */
+    border-radius: 10%; /* Скругленные углы, если это фото */
+    border: 3px solid #fff; /* Белая рамка вокруг изображения */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для фото */
+}
+
+/* Медиазапрос для скрытия изображения на мобильных устройствах */
+@media (max-width: 768px) {
+    .corner-img {
+        display: none; /* Скрываем картинку */
+    }
+}
+
+.resume-container {
+    width: 90%;  /* Задаём ширину 90%, чтобы резюме было адаптивным */
+    max-width: 900px; /* Максимальная ширина для больших экранов */
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрируем текст внутри контейнера */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем фото и информацию */
+}
+
+.profile-img {
+    width: 270px; /* Ограничиваем ширину изображения */
+    height: 270px; /* Ограничиваем высоту изображения */
+    border-radius: 50%; /* Скругляем углы для круглой фотографии */
+    object-fit: cover; /* Обрезаем изображение так, чтобы оно полностью заполнило круг */
+    margin-bottom: 15px; /* Отступ от изображения */
+}
+
+.contact-info h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.contact-info .profession {
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #64a266;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.job .company {
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Дополнительные стили */
+.about, .skills, .languages, .education, .references {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+}
