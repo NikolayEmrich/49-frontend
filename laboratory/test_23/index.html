@@ -218,7 +218,6 @@
         };
 
         function changeLanguage(lang) {
-    // Получаем элементы, которые нужно трясти
     let elementsToShake = [
         document.querySelector("#name-text"),
         document.querySelector("#profession-text"),
@@ -226,18 +225,26 @@
         document.querySelector("#about-text")
     ];
 
-    // Убираем класс 'shake' и 'show' перед добавлением его снова
     elementsToShake.forEach(el => {
-        el.classList.remove('shake');  // Убираем тряску
-        el.classList.remove('show');   // Убираем плавное изменение текста
+        el.classList.remove('shake', 'show', 'text-change');
+        void el.offsetWidth; // Принудительное обновление стиля
+        el.classList.add('shake');
     });
 
-    // Применяем тряску ко всем элементам
-    elementsToShake.forEach(el => {
-        el.classList.add('shake');  // Добавляем класс тряски
-    });
+    const profileImage = document.querySelector(".profile-img");
 
-    // После окончания тряски заменяем текст на новый
+if (profileImage) {
+    console.log("Нашли картинку, добавляем класс pulse-ring");
+    profileImage.classList.add("pulse-ring");
+
+    setTimeout(() => {
+        console.log("Удаляем класс pulse-ring");
+        profileImage.classList.remove("pulse-ring");
+    }, 1000); // Делаем задержку подольше
+} else {
+    console.error("Не найден .profile-img");
+}
+
     setTimeout(() => {
         document.getElementById("name-text").innerHTML = translations[lang].nameText;
         document.getElementById("profession-text").innerHTML = translations[lang].professionText;
@@ -245,20 +252,16 @@
         document.querySelector(".about h2").innerText = translations[lang].about;
         document.getElementById("about-text").innerHTML = translations[lang].aboutText;
 
-        // Убираем анимацию тряски и добавляем плавное появление
         elementsToShake.forEach(el => {
             el.classList.remove('shake');
-            el.classList.add('text-change');  // Добавляем эффект плавного изменения текста
+            el.classList.add('text-change');
+            setTimeout(() => el.classList.add('show'), 10);
         });
 
-        // Делаем плавное появление текста
-        setTimeout(() => {
-            elementsToShake.forEach(el => {
-                el.classList.add('show'); // Добавляем 'show' для плавного появления текста
-            });
-        }, 10);  // Это задержка, чтобы класс 'text-change' успел сработать
-    }, 500); // Время завершения анимации тряски
+        setTimeout(() => avatar.classList.remove('pulse-ring'), 1000);
+    }, 500);
 }
+
 
     </script>
 </body>
