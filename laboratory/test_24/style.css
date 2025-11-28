@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background: #444;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+/* затемнение */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* текст посередине */
+.overlay-content {
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 0.3s;
+}
+
+/* активный режим */
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay.active .overlay-content {
+    opacity: 1;
+    transform: scale(1);
+}
