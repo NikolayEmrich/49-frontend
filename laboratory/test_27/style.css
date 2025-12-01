@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;        /* 🔹 ключевой момент: перенос элементов */
+    gap: 20px;              /* расстояние между карточками */
+    margin-top: 50px;
+    /*border: 2px solid #333;*/ /* 🔹 граница */
+}
+
+.item {
+    width: 200px;
+    background: #eee;
+    border-radius: 12px;      /* скругляем весь блок */
+    overflow: hidden;          /* важно! чтобы картинка не вылазила за края */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+/* Картинка */
+.item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 0 0 12px 12px; /* скругляем только нижние углы картинки */
+}
+
+.item p {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+/* ЗАТЕМНЕНИЕ */
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Контент overlay */
+.overlay-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Картинка overlay — увеличиваем */
+.overlay-content img {
+    width: 80%;         /* теперь занимает 80% ширины экрана */
+    max-width: 800px;   /* максимальная ширина */
+    height: auto;       /* сохраняем пропорции */
+    border-radius: 12px;
+
+    /* Размытая граница / тень */
+    box-shadow: 0 0 20px rgb(11, 17, 23);
+}
+
+/* Текст под картинкой */
+.overlay-content p {
+    color: white;
+    font-size: 28px;    /* увеличим для больших картинок */
+    margin-top: 15px;
+
+    width: 120%;           /* текст занимает 60% ширины экрана */
+    max-width: 800px;     /* можно ограничить максимальную ширину */
+    margin-left: auto;     /* центрируем */
+    margin-right: auto;    /* центрируем */
+    text-align: center;    /* выравнивание текста по центру */
+}
