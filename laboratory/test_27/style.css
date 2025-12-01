@@ -84,9 +84,10 @@ body {
     font-size: 28px;    /* увеличим для больших картинок */
     margin-top: 15px;
 
-    width: 120%;           /* текст занимает 60% ширины экрана */
-    max-width: 800px;     /* можно ограничить максимальную ширину */
-    margin-left: auto;     /* центрируем */
-    margin-right: auto;    /* центрируем */
-    text-align: center;    /* выравнивание текста по центру */
+    width: 90%;           /* текст не растягивается на всю ширину */
+    max-width: 800px;     /* ограничение на больших экранах */
+    margin-left: auto;
+    margin-right: auto;   /* центрирование */
+    text-align: center;
+    word-wrap: break-word; /* перенос слов, если слишком длинные */
 }
