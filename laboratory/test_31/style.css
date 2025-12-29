@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.cover {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.player {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.player p {
+    margin: 0 0 5px 0;
+}
+
+audio {
+    width: 100%;
+}
