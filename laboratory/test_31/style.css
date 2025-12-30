@@ -33,10 +33,22 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* Центрируем подпись именно у видео */
 .player p {
-    margin: 0 0 5px 0;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 audio {
     width: 100%;
+}
+
+/* Видео и YouTube iframe */
+.player video,
+.player iframe {
+    display: block;
+    margin: 0 auto;        /* центр по горизонтали */
+    width: 100%;           /* занимает ширину контейнера */
+    max-width: 100%;       /* не вылезает за границы */
+    border-radius: 12px;
 }
